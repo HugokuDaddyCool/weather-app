@@ -7,7 +7,7 @@ var geocodeAddress = (address, callback) => {
     const options = {
         url: `https://maps.googleapis.com/maps/api/geocode/json?key=${API_KEY}&address=${encodedAddress}`,
         json: true
-    }    
+    }
     request(options,(error, response, body) => {
         if (error) {
             callback('Unable to connect to Google servers.');
